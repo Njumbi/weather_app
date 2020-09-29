@@ -7,6 +7,7 @@ const {
 const bodyParser = require('body-parser')
 const path = require('path')
 
+const OPEN_KEY = ""
 const app = express()
 app.use(bodyParser.urlencoded({
     extended: false
@@ -25,7 +26,7 @@ app.get('/', (req, res, next) => {
 app.post('/', (req, res, next) => {
     const cityName = req.body.city
     console.log(req.body)
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${OPEN_KEY}&units=metric`)
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.OPEN_KEY}&units=metric`)
         .then(response => {
             console.log(response.data)
             res.render('index', {
