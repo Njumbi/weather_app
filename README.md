@@ -1,6 +1,8 @@
 # weather_app
 A simple weather app that allows you to check the weather conditions in any city.
 
+![image](https://raw.githubusercontent.com/Njumbi/weather_app/master/Screenshot%202020-09-29%20at%2015.32.26.png)
+
 ## installation
 run npm install --all after downloading
 
